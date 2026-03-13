@@ -1,0 +1,39 @@
+{
+  "name": "agent-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Powerful Agent CLI with Ink and OpenAI",
+  "main": "dist/cli.js",
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "check-model": "node scripts/check-model.js",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "format": "prettier --write 'src/**/*.{ts,tsx}'"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "groq-sdk": "^1.1.1",
+    "ink": "^6.8.0",
+    "ink-spinner": "^5.0.0",
+    "ink-text-input": "^6.0.0",
+    "lucide-react-native": "^0.577.0",
+    "openai": "^6.28.0",
+    "pino": "^10.0.0",
+    "pino-pretty": "^13.0.0",
+    "react": "^19.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.2.4",
+    "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.57.0"
+  }
+}
