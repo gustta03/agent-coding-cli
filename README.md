@@ -1,93 +1,93 @@
 # Agent CLI
 
-Agent CLI is a powerful, terminal-based AI assistant built to help with programming tasks, file management, and terminal operations directly from your command line.
+Agent CLI é um poderoso assistente de IA baseado em terminal, construído para ajudar em tarefas de programação, gerenciamento de arquivos e operações no terminal diretamente da sua linha de comando.
 
-## Overview
+## Visão Geral
 
-The Agent CLI provides an interactive terminal interface leveraging modern web technologies and AI models. It operates within the context of your current directory and can proactively explore your files, execute commands, and search for information.
+O Agent CLI fornece uma interface de terminal interativa aproveitando tecnologias web modernas e modelos de IA. Ele opera no contexto do seu diretório atual e pode proativamente explorar seus arquivos, executar comandos e buscar informações.
 
-## Core Features
+## Funcionalidades Principais
 
-- **Interactive Terminal UI:** Built with React and Ink for a robust console experience.
-- **AI-Powered Assistance:** Powered by the Groq API for fast model inference (designed primarily for Llama 3).
-- **Tool Calling Setup:** The agent can invoke tools to accomplish complex tasks autonomously.
-- **Local Context Awareness:** Operates within your current working directory and can read, write, edit, and explore project files.
+- **Interface de Terminal Interativa:** Construída com React e Ink para uma experiência de console robusta.
+- **Assistência com IA:** Potencializado pela API Groq para inferência rápida de modelos (projetado principalmente para Llama 3).
+- **Chamada de Ferramentas (Tool Calling):** O agente pode invocar ferramentas para realizar tarefas complexas de forma autônoma.
+- **Contexto Local:** Opera dentro do seu diretório de trabalho atual e pode ler, escrever, editar e explorar os arquivos do projeto.
 
-## Available Agent Tools
+## Ferramentas Disponíveis
 
-The agent is equipped with the following capabilities:
+O agente está equipado com as seguintes capacidades:
 
-- **list_files:** List files within a directory to explore project structures.
-- **read_file:** Read contents of a given file, with support for specific line ranges.
-- **write_file:** Create or overwrite a complete file.
-- **edit:** Make specific, targeted edits to file contents.
-- **apply_diff:** Apply diff-like patch updates to files.
-- **grep:** Search for text content across multiple files.
-- **glob:** Discover files using glob pattern matching.
-- **code_review:** Perform static code analysis on specific files.
-- **run_command:** Execute shell commands (e.g., builds, testing, dependency installation).
-- **web_search:** Perform basic web searches to find external information constraints.
+- **list_files:** Lista arquivos dentro de um diretório para explorar a estrutura do projeto.
+- **read_file:** Lê o conteúdo de um determinado arquivo, com suporte para intervalo de linhas específico.
+- **write_file:** Cria ou sobrescreve um arquivo completo.
+- **edit:** Faz edições específicas e direcionadas no conteúdo de arquivos.
+- **apply_diff:** Aplica atualizações estilo patch (diff) em arquivos.
+- **grep:** Busca por conteúdo de texto através de múltiplos arquivos.
+- **glob:** Encontra arquivos utilizando padrões de busca glob.
+- **code_review:** Realiza análise estática de código em arquivos específicos.
+- **run_command:** Executa comandos shell (ex: builds, testes, instalação de dependências).
+- **web_search:** Realiza buscas na web para encontrar informações e restrições externas.
 
-## Requirements
+## Requisitos
 
-- Node.js (version 22.x or higher recommended)
-- A Groq API key
+- Node.js (versão 22.x ou superior recomendada)
+- Uma chave de API da Groq
 
-## Getting Started
+## Começando
 
-### 1. Installation
+### 1. Instalação
 
-Clone this repository and install the dependencies:
+Clone este repositório e instale as dependências:
 
 ```bash
 npm install
 ```
 
-### 2. Configuration
+### 2. Configuração
 
-Create a \`.env\` file in the root of the project by copying the example template:
+Crie um arquivo \`.env\` na raiz do projeto copiando o modelo de exemplo:
 
 ```bash
 cp .env.example .env
 ```
 
-Open the \`.env\` file and add your Groq API Key:
+Abra o arquivo \`.env\` e adicione sua chave de API da Groq:
 
 ```
-GROQ_API_KEY=your_api_key_here
+GROQ_API_KEY=sua_chave_de_api_aqui
 GROQ_MODEL=llama-3.3-70b-versatile
 ```
 
-Note: It is highly associated to use the recommended model (\`llama-3.3-70b-versatile\`) for the best tool calling performance.
+Nota: É altamente recomendado usar o modelo sugerido (\`llama-3.3-70b-versatile\`) para o melhor desempenho em chamadas de ferramentas.
 
-### 3. Running the Agent
+### 3. Executando o Agente
 
-You can start the project in development mode using \`tsx\`:
+Você pode iniciar o projeto em modo de desenvolvimento usando \`tsx\`:
 
 ```bash
 npm run dev
 ```
 
-Or you can build the project to pure JavaScript and start it from the compiled directory:
+Ou você pode compilar o projeto para JavaScript puro e iniciá-lo do diretório compilado:
 
 ```bash
 npm run build
 npm start
 ```
 
-## Useful Commands
+## Comandos Úteis
 
-- \`npm run dev\`: Start the CLI in development mode using tsx.
-- \`npm run build\`: Compile the TypeScript project.
-- \`npm start\`: Run the compiled CLI from the dist directory.
-- \`npm run check-model\`: Check the validity of the selected Groq model.
-- \`npm run lint\`: Run ESLint to review code standards.
-- \`npm run format\`: Format code using Prettier.
+- \`npm run dev\`: Inicia a CLI em modo de desenvolvimento usando tsx.
+- \`npm run build\`: Compila o projeto TypeScript.
+- \`npm start\`: Executa a CLI compilada do diretório dist.
+- \`npm run check-model\`: Verifica a validade do modelo Groq selecionado.
+- \`npm run lint\`: Roda o ESLint para revisar padrões de código.
+- \`npm run format\`: Formata o código usando Prettier.
 
-## Architecture & Tech Stack
+## Arquitetura e Stack Tecnológica
 
-- **Language:** TypeScript / ESM
-- **UI Framework:** React & Ink
-- **AI Integration:** Groq SDK
-- **Validation:** Zod
-- **Logging:** Pino
+- **Linguagem:** TypeScript / ESM
+- **Framework de UI:** React & Ink
+- **Integração de IA:** Groq SDK
+- **Validação:** Zod
+- **Log:** Pino
