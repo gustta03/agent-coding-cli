@@ -1,4 +1,4 @@
-import type { AgentTool } from './base.tool.js'
+import type { AgentTool } from '../base/base.tool.js'
 
 export class WebSearchTool implements AgentTool {
   name = 'web_search'

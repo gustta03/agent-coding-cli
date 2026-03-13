@@ -1,4 +1,4 @@
-import type { AgentTool } from '../../../tools/base.tool.js'
+import type { AgentTool } from '../../../tools/base/base.tool.js'
 
 export class ToolRegistry {
   private tools = new Map<string, AgentTool>()

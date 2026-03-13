@@ -1,6 +1,6 @@
 import { exec } from 'node:child_process'
 import { promisify } from 'node:util'
-import type { AgentTool } from './base.tool.js'
+import type { AgentTool } from '../base/base.tool.js'
 
 const execPromise = promisify(exec)
 

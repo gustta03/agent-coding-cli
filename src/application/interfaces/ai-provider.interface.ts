@@ -1,4 +1,4 @@
-import type { Message } from '../../../domain/entities/message.js'
+import type { Message } from '../../domain/entities/message.js'
 
 export interface ChatCompletionTool {
   type: 'function'

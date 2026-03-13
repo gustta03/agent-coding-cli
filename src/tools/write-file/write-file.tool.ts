@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import type { AgentTool } from './base.tool.js'
+import type { AgentTool } from '../base/base.tool.js'
 
 export class WriteFileTool implements AgentTool {
   name = 'write_file'
