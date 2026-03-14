@@ -1,7 +1,7 @@
 # Agent CLI
 
 <p align="center">
-  <img src="./screenshot.png" alt="Agent CLI Screenshot" width="800"/>
+  <img src="./Screenshot from 2026-03-13 21-23-25.png" alt="Agent CLI Screenshot" width="800"/>
 </p>
 
 Agent CLI é um poderoso assistente de IA baseado em terminal, construído para ajudar em tarefas de programação, gerenciamento de arquivos e operações no terminal diretamente da sua linha de comando.
