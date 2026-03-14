@@ -1,4 +1,4 @@
-import Groq from 'groq-sdk'
+import { OpenRouter } from '@openrouter/sdk'
 import { config } from '../../config.js'
 import { ToolRegistry } from '../../application/use-cases/agent/tool.registry.js'
 import { RunAgentUseCase } from '../../application/use-cases/agent/run-agent.use-case.js'
@@ -14,7 +14,7 @@ import { EditTool } from '../../tools/edit/edit.tool.js'
 import { CodeReviewTool } from '../../tools/code-review/code-review.tool.js'
 
 export function makeRunAgentUseCase(): RunAgentUseCase {
-  const groq = new Groq({ apiKey: config.groq.apiKey })
+  const openrouter = new OpenRouter({ apiKey: config.openrouter.apiKey })
 
   const registry = new ToolRegistry()
   // Core file operations
@@ -37,5 +37,5 @@ export function makeRunAgentUseCase(): RunAgentUseCase {
   registry.register(new RunCommandTool())
   registry.register(new WebSearchTool())
 
-  return new RunAgentUseCase(groq, registry, config.groq.model)
+  return new RunAgentUseCase(openrouter, registry, config.openrouter.model)
 }

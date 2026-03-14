@@ -7,11 +7,9 @@ const required = (key: string): string => {
 }
 
 export const config = {
-  groq: {
-    apiKey: required('GROQ_API_KEY'),
-    // Default to llama-3.3-70b-versatile (current supported model with tool calling)
-    // Other options: mixtral-8x7b-32768, llama-3.1-8b-instant
-    model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
+  openrouter: {
+    apiKey: required('OPENROUTER_API_KEY'),
+    model: 'meta-llama/llama-3.3-70b-instruct:free', // Meta Llama 3.3 70B - GPT-4 level performance, excellent tool support
   },
   agent: {
     version: '1.0.0',
