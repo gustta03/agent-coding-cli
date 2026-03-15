@@ -14,3 +14,6 @@ export interface Message {
 }
 
 export type OnMessageCallback = (message: Message) => void
+
+// TODO(KAN-16): implementar critérios da task no fluxo backend.
+// Brief: Fazer um teste na api criar um aquivo de log para "Hello world"
